@@ -1,49 +1,68 @@
-<html>
-    <head>
-        <title>Haunted Rock, Paper, Scissors</title>
-        <link rel="stylesheet" href="RPS.CSS"> 
-    </head>
-    <body class="background">
-        <h1 class="gameTitle">Rock, Paper, Scissor, Shoot!</h1>
-        <h5> This game is haunted by the ghost of < h2 >< /h2 ></h5>
-        <div class="info">
-            <h2 class="infoTitle">Score</h2>
-            <p>Player = <span id="p-score">0</span></p>
-            <p>Computer = <span id="c-score">0</span></p>
-            <p></p>
-        </div>
+const options = document.querySelectorAll(".options");
+  let playerScore = 0;
+  let computorscore = 0;
+
+  options.forEach((option) => {
+    option.addEventListener("click", function () {
+      const player = this.value;
+
+      const computorplay = ["Rock", "Paper", "Scissors"];
+      const computor = computorplay[Math.floor(Math.random() * 3)];
+      
+      updateMoves(player, computor);
+      compareInputs(player, computor);
+      updateScore();
+
+    });
+  });
+
+  function updateMoves(player, computor){
+    document.getElementById("p-move").src = `${player}.jpg`;
+    document.getElementById("c-move").src = `${computor}.jpg`;
+  }
 
 
-        <div class="vs">
-            <h2 class="vsTitle">VS.</h2>
-        </div>
 
-            <div class="display-moves">
+  function compareInputs(player, computor) {
+    const match = `${player} vs ${computor}`;
+    if (player === computor) {
+      alert(`${match} is a Tie`);
+      return;
+    }
 
-                <div class="move">
-                  <img id="p-move" src="you_are_not_turkish-1.png" class="options">
-                </div>
-        
+    if (player === "Rock") {
+      if (computor === "Scissors") {
+        alert(`${match} = You Win`);
+        playerScore++;
+      } else {
+        alert(`${match} = Computer Wins`);
+        computorscore++;
+      }
+    }
 
-        
-                <div class="move">
-                  <img id="c-move" src="you_are_not_turkish-1.png" class="options">
-                </div>
-        </div>
-            <div >
-                <h2 class="playerVs">Player</h2>
-                <h2 class="computerVs">Computer</h2>
-                <h2 class="imgIns">Click on the image below to select your move:<h2>
-                <h2 class="rocktxt">Rock</h2>
-                <h2 class="papertxt">Paper</h2>
-                <h2 class="scissortxt">Scissor</h2>
-            </div>
-        <div class="action">
 
-            <input class="options" type="image" src="images.jpg" value="Rock">
-            <input class="options" type="image" src="paper.jpg" value="Paper">
-            <input class="options" type="image" src="Scissors.jpg" value="Scissors">
-          </div>
-        <script src="RPS.JS"></script>
-    </body>
-</html>
+    else if (player === "Paper") {
+      if (computor === "Rock") {
+        alert(`${match} = You Win`);
+        playerScore++;
+      } else {
+        alert(`${match} = Computer Wins`);
+        computorscore++;
+      }
+    }
+
+    else {
+      if (computor === "Paper") {
+        alert(`${match} = You Win`);
+        playerScore++;
+      } else {
+        alert(`${match} = Computer Wins`);
+        computorscore++;
+      }
+    }
+  }
+
+  function updateScore() {
+    document.getElementById("p-score").textContent = playerScore;
+    document.getElementById("c-score").textContent = computorscore;
+  }
