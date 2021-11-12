@@ -1,0 +1,188 @@
+body {
+    text-align: center;
+  }
+  
+  .container {
+      background-image:
+      url('istockphoto-1266147845-640x640.jpg');
+      background-size: cover;
+      background-repeat: repeat-y;
+      background-attachment: fixed;
+      text-align: center;
+  
+  }
+  
+  .action {
+  
+    max-width: 800px;
+  
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+  
+  .options {
+    animation-name: anim-fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 100px;
+  
+  }
+  
+  .display-moves {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  
+  .vsTitle{
+      font-size: 65px;
+      color: magenta;
+      text-align: center;
+  
+      font-weight: 950;
+      position: relative;
+  
+  }
+  
+  
+  
+  *{
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      margin: 0;
+  }
+  
+  .background{
+      background-image: url("istockphoto-1266147845-640x640.jpg");
+      background-size: cover
+  }
+  
+  .gameTitle{
+      text-align: center;
+  
+      text-decoration: underline;
+      font-size: 50px;
+  }
+  
+  .info{
+      text-align: center;
+      font-size: 25px;
+      width: 250px;
+      height: 60px;
+      line-height: 2;
+      margin-left: 50px;
+  
+  }
+  
+  .infoTitle{
+      text-decoration: underline;
+  }
+  
+  .infoIns{
+      text-align: center;
+      font-size: 25px;
+      width: 250px;
+      height: 160px;
+      line-height: 2;
+  
+  }
+  
+  .infoInsTitle{
+      text-decoration: underline;
+  }
+  
+  
+  .square1{
+      width: 40%;
+      height: auto;
+  
+      height: 80px;
+      width: 255px;
+      left: 350px;
+      bottom: 210px;
+  }
+  
+  .square2{
+      width: 40%;
+      height: auto;
+  
+      height: 80px;
+      width: 255px;
+      left: 850px;
+      bottom: 465px;
+  }
+  
+  .imgIns{
+      position: relative;
+      text-align: center;
+      bottom: 85px;
+  }
+  
+  .playerVs{
+      font-size: 40px;
+      left: 225px;
+      bottom: 170px;
+      color: blue;
+      width: 300px;
+      position: relative;
+  }
+  
+  .computerVs{
+      font-size: 40px;
+      position: relative;
+      left: 690px;
+      bottom: 210px;
+      color: red;
+      width: 300px;
+  }
+  
+  .rock{
+      position: relative;
+      text-align: center;
+      bottom: 70px;
+      right: 400px;
+  }
+  
+  .paper{
+      position: relative;
+      text-align: center;
+      bottom: 70px;
+      width: 200px;
+      left: 650px;
+  }
+  
+  .scissor{
+      position: relative;
+      text-align: center;
+      bottom: 70px;
+      left: 1050px;
+      width: 200px;
+  }
+  
+  .rocktxt{
+      position: relative;
+      text-align: center;
+      bottom: 70px;
+      right: 220px;
+  }
+  
+  .papertxt{
+      position: relative;
+      text-align: center;
+      bottom: 70px;
+      width: 200px;
+      left: 450px;
+  }
+  
+  .scissortxt{
+      position: relative;
+      text-align: center;
+      bottom: 70px;
+      left: 725px;
+      width: 200px;
+  }
